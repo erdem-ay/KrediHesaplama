@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+
+#form{
+    font-size: x-large;
+    text-align: center;
+    border: 2px  solid black;
+    margin:auto ;
+    width: 400px;
+    height: 150px;
+    margin-top: 50px;
+    padding-top: 20px;
+}
