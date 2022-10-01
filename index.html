@@ -10,18 +10,19 @@
 <body>
     <h1 for="#">Kredi Hesaplama Formu</h1>
     <form id="form">
-        <label id="cekilecekTutar">Çekilecek kredi tutar:</label> 
+        <label for="cekilecekTutar">Çekilecek kredi tutar:</label> 
         <input type="text" id="cekilecekTutar"><br>
-        <label id="TaksitSayısı">Geri ödeme taksit sayısı:</label> 
+        <label for="TaksitSayısı">Geri ödeme taksit sayısı:</label> 
         <select id="TaksitSayısı">
             <option value="12">12</option>
             <option value="24">24</option>
             <option value="36">36</option>
             <option value="48">48</option>
         </select><br>
-        <input type="button" value="Aylık taksit tutarını hesapla">
+        <input type="button" value="Aylık taksit tutarını hesapla" onclick="krediHesapla();">
+        <p id="result"></p>
     </form>
-    <p id="result" onclick="javascript:KrediHesapla();"></p>
+    
     <script src="./script.js"></script>
 </body>
 </html>

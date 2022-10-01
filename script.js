@@ -1,23 +1,24 @@
-function KrediHesapla() {
+
+function krediHesapla() {
   let aylıkTaksit, odenecekToplamTutar;
 
   let cekilecekTutar = document.querySelector("#cekilecekTutar").value;
   let liste = document.querySelector("#TaksitSayısı");
-  let taksitSayısı = liste.options[liste.selectedIndex].value;
+  let taksitSayisi = liste.options[liste.selectedIndex].value;
 
-  if (taksitSayısı == 12) {
+  if (taksitSayisi == 12) {
     odenecekToplamTutar = cekilecekTutar * 1.1;
-  } else if (taksitSayısı == 24) {
+  } else if (taksitSayisi == 24) {
     odenecekToplamTutar = cekilecekTutar * 1.2;
-  } else if (taksitSayısı == 36) {
+  } else if (taksitSayisi == 36) {
     odenecekToplamTutar = cekilecekTutar * 1.3;
-  } else if (taksitSayısı == 48) {
+  } else if (taksitSayisi == 48) {
     odenecekToplamTutar = cekilecekTutar * 1.4;
   }
 
-  aylıkTaksit=odenecekToplamTutar/taksitSayısı;
+  aylıkTaksit=odenecekToplamTutar/taksitSayisi;
 
-  document.querySelector('#result').innerHTML="Geri ödenecek tutar: " + odenecekToplamTutar + "<br>"
-  "Aylık Taksit tutarı: " + aylıkTaksit;
+  document.querySelector('#result').innerHTML="Geri ödenecek tutar: " + odenecekToplamTutar + "<br>" +
+  "Aylık Taksit tutarı: " + aylıkTaksit.toFixed(0);
 
 }
